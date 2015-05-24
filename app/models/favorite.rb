@@ -1,6 +1,6 @@
 class Favorite < ActiveRecord::Base
 
-  belongs_to :username
+  belongs_to :user
 
   belongs_to :venue
 
