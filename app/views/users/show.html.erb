@@ -30,7 +30,9 @@
           </div>
         </div>
       </div>
-
+      <% @user.favorites.each do |favorite| %>
+        <li class = "list-group-item"><%= favorite.dish.name %> at <%= favorite.venue.name %></li>
+        <% end %>
     </div>
   </div>
 </div>
