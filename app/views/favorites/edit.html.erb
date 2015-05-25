@@ -28,7 +28,7 @@
               User
             </label>
             <div class="col-sm-10">
-              <input type="text" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%= @favorite.user_id %>">
+              <input type="text" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%= @favorite.user.username.capitalize %>">
             </div>
           </div>
 
@@ -38,7 +38,7 @@
               Dish
             </label>
             <div class="col-sm-10">
-              <input type="text" id="dish_id" name="dish_id" placeholder="Dish" class="form-control" value="<%= @favorite.dish_id %>">
+              <input type="text" id="dish_id" name="dish_id" placeholder="Dish" class="form-control" value="<%= @favorite.dish.name.capitalize %>">
             </div>
           </div>
 
@@ -48,7 +48,7 @@
               Venue
             </label>
             <div class="col-sm-10">
-              <input type="text" id="venue_id" name="venue_id" placeholder="Venue" class="form-control" value="<%= @favorite.venue_id %>">
+              <input type="text" id="venue_id" name="venue_id" placeholder="Venue" class="form-control" value="<%= @favorite.venue.name.capitalize %>">
             </div>
           </div>
 
