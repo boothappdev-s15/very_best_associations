@@ -33,6 +33,19 @@
           </div>
         </div>
       </div>
+
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-success">
+          Favorite List
+        </li>
+        <% @dish.favorites.each do |favorite| %>
+          <li class="list-group-item">
+            <%= favorite.user.username.capitalize %> at <%= favorite.venue.name.capitalize %>
+          </li>
+        <% end %>
+      </ul>
+
+
     </div>
   </div>
 </div>
