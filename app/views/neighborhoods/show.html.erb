@@ -33,6 +33,24 @@
           </div>
         </div>
       </div>
+      <ul>
+        <h3>Venues</h3>
+
+      <% @neighborhood.venues.each do |venue| %>
+        <li><%= venue.name %></li>
+
+      <% end %>
+      </ul>
+
+      <ul>
+        <h3>Favorites</h3>
+
+      <% @neighborhood.favorites.each do |fave| %>
+        <li><%= fave.user.username %> likes <%= fave.dish.name %> at <%= fave.venue.name %></li>
+
+      <% end %>
+      </ul>
+
     </div>
   </div>
 </div>
