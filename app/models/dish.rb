@@ -4,6 +4,6 @@ class Dish < ActiveRecord::Base
   validates :cusine_id, :presence => true
 
   belongs_to :cuisine
-  has_many :favorites
+  has_many :favorite
 
 end
