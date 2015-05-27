@@ -14,7 +14,7 @@
               <dd><%= @dish.name %></dd>
 
               <dt>Cuisine</dt>
-              <dd><%= @dish.cuisine_id %></dd>
+              <dd><%= @dish.cuisine.name %></dd>
 
             </dl>
             <div class="btn-group btn-group-justified">
@@ -22,11 +22,11 @@
                 <i class="fa fa-chevron-left"></i>
               </a>
 
-              <a href="/dishes/<%= @dish.id %>/edit" class="btn btn-warning">
+              <a href="/dishes/<%= @dish.cuisine.name %>/edit" class="btn btn-warning">
                 <i class="fa fa-edit"></i>
               </a>
 
-              <a href="/delete_dish/<%= @dish.id %>" class="btn btn-danger" rel="nofollow">
+              <a href="/delete_dish/<%= @dish.cuisine.name %>" class="btn btn-danger" rel="nofollow">
                 <i class="fa fa-trash-o"></i>
               </a>
             </div>
