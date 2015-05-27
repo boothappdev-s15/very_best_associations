@@ -30,8 +30,20 @@
                 <i class="fa fa-trash-o"></i>
               </a>
             </div>
+
           </div>
         </div>
+        <ul class="list-group">
+          <li class="list-group-item">
+            Venues List Below
+          </li>
+          <% @neighborhood.venues.each do |venue| %>
+          <li class="list-group-item">
+            <%= venue.name %>
+          </li>
+          <% end %>
+        </ul>
+
       </div>
     </div>
   </div>
