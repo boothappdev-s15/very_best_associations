@@ -33,6 +33,37 @@
           </div>
         </div>
       </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">All Venues</h3>
+        </div>
+        <div class="panel-body">
+          <% @neighborhood.venues.each do |venue| %>
+          <div>
+          <%= venue.name %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+        <h3 class="panel-title">Favorites</h3>
+        </div>
+        <div class="panel-body">
+          <% @neighborhood.favorites.each do |favorite| %>
+          <div>
+          <%= favorite.user.username %> likes <%= favorite.dish.name %> at <%=favorite.venue.name %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+
+
+
+
+
     </div>
   </div>
 </div>
