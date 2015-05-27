@@ -31,6 +31,9 @@
         </div>
       </div>
       <ul class="list-group">
+        <h4 class="list-group-item">
+          Favorites
+        </h4>
         <% @user.favorites.each do |favorite| %>
         <li class="list-group-item">
           <%= favorite.dish.name %> at <%= favorite.venue.name %>
