@@ -19,13 +19,6 @@
               <dt>Neighborhood</dt>
               <dd><%= @venue.neighborhood.name %></dd>
 
-              <dt>Favorites</dt>
-              <% @venue.favorite.each do |favorite| %>
-                <dd>
-                  <%= favorite.dish.name %> is <%= favorite.user.username %>'s favorite
-                </dd>
-              <% end %>
-
             </dl>
             <div class="btn-group btn-group-justified">
               <a href="/venues" class="btn btn-primary">
@@ -43,6 +36,16 @@
           </div>
         </div>
       </div>
+
+      <ul class="list-group">
+        <% @venue.favorite.each do |favorite| %>
+          <li class="list-group-item">
+            <%= favorite.user.username %> likes <%= favorite.dish.name %>
+          </li>
+        <% end %>
+      </ul>
+
+
     </div>
   </div>
 </div>
