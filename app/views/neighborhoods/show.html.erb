@@ -16,10 +16,14 @@
               <dt>City</dt>
               <dd><%= @neighborhood.city %></dd>
 
-
-
-
-
+<dt>venue names</dt>
+<% @neighborhood.venues.each do |thing| %>
+<dd><%= thing.name %></dd>
+<% end %>
+<dt>favorites </dt>
+<% @neighborhood.favorites.each do |thing| %>
+<dd><%= thing.user.username %> likes <%= thing.dish.name %> at <%= thing.venue.name %></dd>
+<% end %>
             </dl>
 
 
