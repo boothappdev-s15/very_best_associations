@@ -28,8 +28,11 @@
           <dd><%= dish.name %></dd>
 
           <dt>Cuisine</dt>
-          <dd><%= dish.cuisine_id %></dd>
 
+          <% if dish.cuisine != nil %>
+            <%= dish.cuisine.name %>
+          <% end %>
+ 
         </dl>
         <div class="btn-group btn-group-justified">
           <a href="/dishes/<%= dish.id %>" class="btn btn-primary">
