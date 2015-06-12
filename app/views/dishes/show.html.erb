@@ -14,7 +14,7 @@
               <dd><%= @dish.name %></dd>
 
               <dt>Cuisine</dt>
-              <dd><%= @dish.cuisine_id %></dd>
+              <dd><%= @dish.cuisine.name %></dd>
 
             </dl>
             <div class="btn-group btn-group-justified">
@@ -33,6 +33,27 @@
           </div>
         </div>
       </div>
+</div>
+
+<div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Favorites </h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12">
+            <dl class="dl-horizontal">
+           <% @dish.favorites.each do |favorite| %>
+            <li>
+                <%= favorite.user.username %> likes <%= favorite.venue.name %>
+              </li>
+            <% end %>
+            </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
