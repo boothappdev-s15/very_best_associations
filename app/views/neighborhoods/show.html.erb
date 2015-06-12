@@ -16,6 +16,11 @@
               <dt>City</dt>
               <dd><%= @neighborhood.city %></dd>
 
+              <dt>Venues</dt>
+              <% @neighborhood.venues.each do |venue| %>
+              <dd><%= venue.name %></dd>
+              <% end %>
+
             </dl>
             <div class="btn-group btn-group-justified">
               <a href="/neighborhoods" class="btn btn-primary">
