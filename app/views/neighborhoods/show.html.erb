@@ -30,8 +30,34 @@
                 <i class="fa fa-trash-o"></i>
               </a>
             </div>
+
           </div>
         </div>
+        <ul class="list-group">
+          <h4 class="list-group-item">
+            Venues List Below
+          </h4>
+          <% @neighborhood.venues.each do |venue| %>
+          <li class="list-group-item">
+            <%= venue.name %>
+          </li>
+          <% end %>
+        </ul>
+
+      <ul class="list-group">
+        <h4 class="list-group-item">
+          Favorites
+        </h4>
+        <% @neighborhood.favorites.each do |favorite| %>
+          <li class="list-group-item">
+            <%= favorite.user.username %> likes <%= favorite.dish.name %> at <%= favorite.venue.name %>
+          </li>
+        <% end %>
+      </ul>
+
+
+
+
       </div>
     </div>
   </div>
