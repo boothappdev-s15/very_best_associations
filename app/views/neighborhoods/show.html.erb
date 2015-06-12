@@ -1,6 +1,4 @@
-<!-- Responsive panel example-->
-
-<div class="row">
+div class="row">
   <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -33,6 +31,29 @@
           </div>
         </div>
       </div>
+
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-success">
+          All Venues
+        </li>
+        <% @neighborhood.venues.each do |venue| %>
+          <li class="list-group-item">
+            <%= venue.name %>
+          </li>
+        <% end %>
+      </ul>
+
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-success">
+          Favorites
+        </li>
+        <% @neighborhood.favorites.each do |favorite| %>
+          <li class="list-group-item">
+            <%= favorite.user.username %> likes <%= favorite.dish.name %> at <%= favorite.venue.name %>
+          </li>
+        <% end %>
+      </ul>
+
     </div>
   </div>
 </div>
