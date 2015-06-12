@@ -17,7 +17,7 @@
               <dd><%= @venue.address %></dd>
 
               <dt>Neighborhood</dt>
-              <dd><%= @venue.neighborhood_id %></dd>
+              <dd><%= @venue.neighborhood.name %></dd>
 
             </dl>
             <div class="btn-group btn-group-justified">
@@ -36,8 +36,31 @@
           </div>
         </div>
       </div>
+      </div>
+
+      <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Favorites</h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12">
+            <dl class="dl-horizontal">
+              <% @venue.favorites.each do |favorite| %>
+
+              <li><%= favorite.user.username %> at <%= favorite.dish.name %> </li>
+              <% end %>
+            </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      </div>
     </div>
   </div>
-</div>
+
 
 <!-- End responsive panel example -->
