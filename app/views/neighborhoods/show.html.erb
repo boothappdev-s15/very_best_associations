@@ -32,6 +32,12 @@
             </div>
           </div>
         </div>
+        <ul class="list-group">
+          <li class="list-group-item"><strong>Venues</strong></li>
+        <% @neighborhood.venues.each do |venue| %>
+          <li class="list-group-item"><%= venue.name %></li>
+        <% end %>
+        </ul>
       </div>
     </div>
   </div>
